@@ -15,6 +15,10 @@ repositories {
     }
 }
 
+tasks.withType(Copy) {
+    duplicatesStrategy = 'exclude'
+}
+
 dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
 
@@ -29,3 +33,4 @@ dependencies {
     implementation files('wpilibj.jar')
     implementation files('wpiHal.jar')
 }
+
